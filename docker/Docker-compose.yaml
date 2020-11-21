@@ -1,0 +1,12 @@
+version: "3"
+services:
+  engine_psqldb:
+    image: "postgres:11"
+    container_name: "engine_psqldb"
+    ports:
+      - "5432:5432"
+    volumes:
+      - vol_psqldb_data:/var/lib/postgresql/data
+    env_file: environment-vars.env
+volumes:
+  vol_psqldb_data:
