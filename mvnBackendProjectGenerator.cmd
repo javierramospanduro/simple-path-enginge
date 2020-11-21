@@ -1,0 +1,2 @@
+mvn io.quarkus:quarkus-maven-plugin:1.9.2.Final:create -DprojectGroupId=org.breadhard.engines -DprojectArtifactId=bh-simple-path-engine -DclassName="org.acme.rest.json.SrvSimplePathEngine" -Dpath="/simple-path-engine" -Dextensions="resteasy-jsonb"
+cd rest-json-quickstart
