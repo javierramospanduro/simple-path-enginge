@@ -1,8 +1,0 @@
-com\javi\engine\utils\Constants.class
-org\javi\engine\types\Response.class
-org\javi\engine\types\AxisType.class
-org\javi\engine\dto\Path.class
-org\javi\engine\dto\Axis.class
-org\javi\engine\types\Operation.class
-org\javi\engine\dto\Range.class
-org\javi\engine\dto\Signal.class
