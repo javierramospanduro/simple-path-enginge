@@ -16,22 +16,15 @@ import org.javi.engine.types.Response;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.javi.engine.dao.DAxis;
-import com.javi.engine.dao.DConfiguration;
-import com.javi.engine.utils.Constants;
-
 public class AllTests {
 	private static final Log LOG = LogFactory.getLog(AllTests.class);
-	private static DConfiguration configuration;
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		configuration = new DConfiguration("localhost");
-		try {
-			configuration.getMongoDatabase().getCollection(Constants.AXIS_COLLECTION).drop();
-		} catch (Exception e) {
-			LOG.info("La coleccion no existía");
-		}
-		configuration.getMongoDatabase().createCollection(Constants.AXIS_COLLECTION);
+		LOG.info("Before class execution");
+	}
+	@Before
+	public static viod setUpBeforeTest() throws Exception {
+		LOG.info("Before test execution");
 	}
 	@Test
 	public void test01() {
@@ -42,19 +35,12 @@ public class AllTests {
 		LOG.info("Indications -> " + indications);
 		path.get(0).explore(indications);
 		LOG.info("Explored, result: " + path.get(0).isGoodDirection());
+		LOG.info("And the data is: " + path);
 		if (path.get(0).isGoodDirection()) {
 			LOG.info("Is the good direction, the result is: " + path.get(0).getGoodResponse());
 		} else {
 			LOG.info("Is the bad direction, the result is: " + path.get(0).getBadResponse());
-		}
-		// Insertamos la cole en la bdd
-		List<Axis> parametry = axisFactory();
-		DAxis dAxis = new DAxis();dAxis.setConfiguration(configuration);
-		for (Axis axis:parametry) {
-			LOG.info("Voy a insertar un eje: " + axis);
-			dAxis.insertOne(axis);
-		}
-		
+		}		
 	}
 
 	public List<Axis> axisFactory() {

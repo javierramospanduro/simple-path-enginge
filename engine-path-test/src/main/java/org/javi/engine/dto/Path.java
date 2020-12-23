@@ -17,7 +17,7 @@ public class Path implements Serializable {
 	
 	Axis rootAxis;
 	Object rootValue;
+	String rootDescription;
 	List<Signal> signals;
-	
 	
 }
