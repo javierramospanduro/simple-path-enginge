@@ -63,13 +63,13 @@ public class Signal implements Serializable {
 	}
 	
 	public boolean isGoodDirection(Map<String,Object> indications) {
-		Object calculatedValue = indications.get(axis.getId());		
+		Object calculatedValue = indications.get(axis.getAxisId());		
 		if (calculatedValue == null) {
 			LOG.debug("Value for the indication #" + axis +"# not found");
 			return false;
 		} else {
 			Map<String,Object> entry = new HashMap<>();
-			entry.put(axis.getId(),calculatedValue);
+			entry.put(axis.getAxisId(),calculatedValue);
 			LOG.debug("Setting used indication: " + entry);
 			setUsedIndication(entry);
 		}

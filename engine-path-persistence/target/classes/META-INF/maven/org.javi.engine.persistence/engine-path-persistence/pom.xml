@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.javi.engine.persistence</groupId>
+	<artifactId>engine-path-persistence</artifactId>
+	<version>${engine.version}</version>
+	<parent>
+		<groupId>org.javi.engine</groupId>
+		<artifactId>engine-path-parent</artifactId>
+		<version>1.0.0</version>
+	</parent>
+	<properties>
+		<mongo-java-driver.version>3.10.2</mongo-java-driver.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+			<version>${mongo-java-driver.version}</version>
+		</dependency>
+	</dependencies>
+</project>

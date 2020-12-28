@@ -5,46 +5,11 @@
 	<groupId>org.javi.engine</groupId>
 	<artifactId>engine-path-core</artifactId>
 	<version>0.0.1</version>
-	<properties>
-		<lombok.version>1.18.16</lombok.version>
-		<commons-logging.version>1.1.1</commons-logging.version>
-		<commons-lang3.version>3.11</commons-lang3.version>
-		<mockito-all.version>1.10.9</mockito-all.version>
-		<junit.version>4.8.1</junit.version>
-		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
-		<maven-compiler-plugin.configuration.source.version>1.8</maven-compiler-plugin.configuration.source.version>		
-		<maven-compiler-plugin.configuration.test.version>1.8</maven-compiler-plugin.configuration.test.version>
-	</properties>
-	<dependencies>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>${lombok.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging</artifactId>
-			<version>${commons-logging.version}</version>
-		</dependency>
-				<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>${commons-lang3.version}</version>
-		</dependency>		
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
-			<version>${mockito-all.version}</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
+	<parent>
+        <groupId>org.javi.engine</groupId>
+        <artifactId>engine-path-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
 	<build>
 		<plugins>
 			<plugin>

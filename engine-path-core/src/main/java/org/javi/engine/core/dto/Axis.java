@@ -12,12 +12,12 @@ import lombok.ToString;
 public class Axis implements Serializable {
 	
 	private static final long serialVersionUID = 4705571101234736153L;
-	String id;
+	String axisId;
 	String description;
 	AxisType type;
 	public Axis(String id, String description, AxisType type) {
 		super();
-		this.id = id;
+		this.axisId = id;
 		this.description = description;
 		this.type = type;
 	}
